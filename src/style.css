@@ -1,0 +1,25 @@
+#hero {
+    background-image: url('image1.jpg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Assurez-vous que le texte est lisible sur l'image de fond */
+    padding: 100px 0; /* Ajustez le padding pour obtenir l'espacement souhaité */
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2; /* Assurez-vous que le contenu est au-dessus de l'image de fond */
+  }
+  
+  #hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Ajoutez un overlay sombre pour améliorer la lisibilité du texte */
+    z-index: 1;
+  }
+  
